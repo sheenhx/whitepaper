@@ -14,26 +14,214 @@ If you have any questions, please join the [DataHighway Discord](https://discord
 
 # Table of Contents
 
-* [Introduction](#chapter-4cc1c8)
-* [Goals](#chapter-87444b)
-* [Roadmap](#chapter-1bb8f5)
-* [Economic Configuration](#chapter-8d48a2)
-* [Token Issuance](#chapter-0bab28)
-* [Token Acquisition](#chapter-72700f)
-* [DAO](#chapter-050b73)
-* [Mining](#chapter-d9671b)
-* [Roaming](#chapter-6c4c97)
-* [Inter-Chain Data Market](#chapter-2a3ac1)
-* [Application Ecosystem](#chapter-666c5a)
-* [Technical Model](#chapter-822b5d)
-* [Glossary](#chapter-2e4982)
-* [Abbreviations](#chapter-461289)
-* [References](#chapter-24ba9b)
-* [Appendices](#chapter-432af7)
+* [Introduction](#introduction)
+    * [DAO](#dao)
+    * [Mining](#mining)
+    * [Inter-Chain Data Market](#inter-chain-data-market)
+    * [Roaming](#roaming)
+* [Goals](#goals)
+  * [Fair Distribution & Decentralisation Model](#fair-distribution--decentralisation-model)
+  * [Equal Participation Opportunity](#equal-participation-opportunity)
+  * [Inter-Chain Data Market](#inter-chain-data-market-1)
+  * [Roaming](#roaming-1)
+    * [Fully Decentralized Roaming Solution](#fully-decentralized-roaming-solution)
+    * [Compatibility with the LoRa Alliance](#compatibility-with-the-lora-alliance)
+    * [Integrates with other Roaming Hubs](#integrates-with-other-roaming-hubs)
+    * [Automated Billing & Charging](#automated-billing--charging)
+    * [Competitive (Low-Cost), Fair Access, and Consumer Protection](#competitive-low-cost-fair-access-and-consumer-protection)
+    * [Interfaces](#interfaces)
+    * [Intuitive UX](#intuitive-ux)
+  * [External Oracle](#external-oracle)
+  * [Scalability](#scalability)
+  * [Security](#security)
+  * [Auditable](#auditable)
+  * [Plugins](#plugins)
+  * [DEX](#dex)
+  * [API](#api)
+* [Roadmap](#roadmap)
+  * [January 2020](#january-2020)
+  * [February 2020](#february-2020)
+  * [March 2020](#march-2020)
+  * [April 2020](#april-2020)
+  * [June 2020](#june-2020)
+  * [July 2020](#july-2020)
+* [Economic Configuration](#economic-configuration)
+  * [Economic Variables](#economic-variables)
+    * [Genesis Total Symbol](#genesis-total-symbol)
+    * [Genesis Total Supply](#genesis-total-supply)
+    * [Block Production / Mining Time](#block-production--mining-time)
+      * [Comparison with Other Networks](#comparison-with-other-networks)
+    * [Exchange Rate](#exchange-rate)
+    * [Future Changes](#future-changes)
+* [Token Issuance](#token-issuance)
+  * [Token Issuance Options](#token-issuance-options)
+    * [Block Authoring / Production Rewards](#block-authoring--production-rewards)
+      * [Token Issuance Initial Rate](#token-issuance-initial-rate)
+      * [Block Reward Issuance Rate](#block-reward-issuance-rate)
+      * [Transactions Per Block](#transactions-per-block)
+      * [Collators](#collators)
+        * [Collator Pool Size](#collator-pool-size)
+      * [Block Reward Treasury Fees](#block-reward-treasury-fees)
+    * [Allocating DAO Treasury Unlocked Reserves](#allocating-dao-treasury-unlocked-reserves)
+  * [Token Issuance Halving Inflation Strategy](#token-issuance-halving-inflation-strategy)
+    * [About Halving](#about-halving)
+    * [Impact & Benefits](#impact--benefits)
+    * [Frequency](#frequency)
+    * [Longevity](#longevity)
+    * [Transparency](#transparency)
+    * [Comparison with Halving on the Bitcoin Network](#comparison-with-halving-on-the-bitcoin-network)
+* [Token Acquisition](#token-acquisition)
+* [DAO](#dao-1)
+  * [Treasury](#treasury)
+    * [Unlocked Reserves](#unlocked-reserves)
+  * [Future Monetary & Fiscal Policies](#future-monetary--fiscal-policies)
+  * [Financial Model](#financial-model)
+    * [Balance Sheet](#balance-sheet)
+    * [Cash Flow Statement](#cash-flow-statement)
+* [Mining](#mining-1)
+  * [Benefits](#benefits)
+  * [Reward Options](#reward-options)
+  * [Reward Types](#reward-types)
+  * [Fixed Term Periods](#fixed-term-periods)
+  * [Random Sampling Dates](#random-sampling-dates)
+  * [Reward Spending & Reinvestment](#reward-spending--reinvestment)
+  * [Rules](#rules)
+  * [Mining Speed Boost (MSB)](#mining-speed-boost-msb)
+  * [Mining Loyalty Bonus (MLB)](#mining-loyalty-bonus-mlb)
+  * [Mining Diversity Threshold (MDT)](#mining-diversity-threshold-mdt)
+  * [Initial Asset Distribution](#initial-asset-distribution)
+  * [Financial Model](#financial-model-1)
+  * [Token Mining](#token-mining)
+    * [Goals](#goals-1)
+    * [Background & Benefits](#background--benefits)
+    * [Rights](#rights)
+      * [Compounding Rewards](#compounding-rewards)
+    * [Costs](#costs)
+    * [Registration](#registration)
+    * [Reward Calculation](#reward-calculation)
+    * [Example: PoP ICBAM Combo Mining for Voting Power](#example-pop-icbam-combo-mining-for-voting-power)
+    * [Transfer Bridge](#transfer-bridge)
+    * [Inter-Chain Asset Mappings](#inter-chain-asset-mappings)
+  * [Token DEX](#token-dex)
+  * [Hardware Mining (Hardware as Collateral)](#hardware-mining-hardware-as-collateral)
+    * [Background & Benefits](#background--benefits-1)
+    * [Goals](#goals-2)
+    * [Costs](#costs-1)
+    * [Registration](#registration-1)
+    * [Reward Calculation](#reward-calculation-1)
+    * [Rights](#rights-1)
+    * [Financial Model](#financial-model-2)
+      * [Example: PoP Hardware Assets Combo Mining for Voting Power](#example-pop-hardware-assets-combo-mining-for-voting-power)
+  * [Development Mining (Runtimes & DApps as Collateral)](#development-mining-runtimes--dapps-as-collateral)
+    * [Background & Benefits](#background--benefits-2)
+    * [Goals](#goals-3)
+    * [Costs](#costs-2)
+    * [Tags](#tags)
+    * [Registration](#registration-2)
+    * [Reward Calculation](#reward-calculation-2)
+    * [Rights](#rights-2)
+    * [Financial Model](#financial-model-3)
+  * [Advocacy Mining (Marketing as Collateral)](#advocacy-mining-marketing-as-collateral)
+    * [Background & Benefits](#background--benefits-3)
+    * [Goals](#goals-4)
+    * [Costs](#costs-3)
+    * [Tags](#tags-1)
+    * [Registration](#registration-3)
+    * [Reward Calculation](#reward-calculation-3)
+    * [Rights](#rights-3)
+    * [Financial Model](#financial-model-4)
+  * [Governance Mining (Governance as Collateral)](#governance-mining-governance-as-collateral)
+    * [Background & Benefits](#background--benefits-4)
+    * [Goals](#goals-5)
+    * [Costs](#costs-4)
+    * [Registration](#registration-4)
+    * [Reward Calculation](#reward-calculation-4)
+    * [Rights](#rights-4)
+    * [Financial Model](#financial-model-5)
+* [Roaming](#roaming-2)
+  * [Economics](#economics)
+    * [Payment and Monthly Audit Process](#payment-and-monthly-audit-process)
+    * [Transaction Fees (Subscription-based or Ad-Hoc Usage)](#transaction-fees-subscription-based-or-ad-hoc-usage)
+    * [Operations Fees](#operations-fees)
+      * [Subscription](#subscription)
+      * [Ad-Hoc](#ad-hoc)
+    * [Default Roaming Fees](#default-roaming-fees)
+    * [Changes to Roaming Fees](#changes-to-roaming-fees)
+    * [Risks & Mitigation Measures](#risks--mitigation-measures)
+    * [Token Acquisition (DHX)](#token-acquisition-dhx)
+  * [Data Storage](#data-storage)
+    * [Storage Requirements](#storage-requirements)
+    * [Storage Periodic Maintenance and Migration](#storage-periodic-maintenance-and-migration)
+      * [Data Pruning](#data-pruning)
+      * [Data Retention and Periodic Migration](#data-retention-and-periodic-migration)
+  * [Architecture](#architecture)
+    * [Class Diagrams](#class-diagrams)
+      * [Aggregations (of SMB and Forwarding)](#aggregations-of-smb-and-forwarding)
+    * [Class Diagram (Simplified)](#class-diagram-simplified)
+    * [Swimlane (Flowchart) Diagrams](#swimlane-flowchart-diagrams)
+      * [LPWAN Supernode Network Setup, Shared Identity & Staking](#lpwan-supernode-network-setup-shared-identity--staking)
+      * [Gateway Setup & Staking](#gateway-setup--staking)
+      * [End Device Setup & Staking](#end-device-setup--staking)
+      * [End Device Roaming Setup](#end-device-roaming-setup)
+  * [Use Cases](#use-cases)
+    * [Roaming with MXC End Device between Supernodes Registered on MXC Network](#roaming-with-mxc-end-device-between-supernodes-registered-on-mxc-network)
+    * [Roaming at a Supernode that is registered on the MXC Network using an End Device from a different Network Operator that is registered on ThingPark Exchange (TEX)](#roaming-at-a-supernode-that-is-registered-on-the-mxc-network-using-an-end-device-from-a-different-network-operator-that-is-registered-on-thingpark-exchange-tex)
+    * [Flowchart Diagrams](#flowchart-diagrams)
+    * [Roaming at a Swisscom Network Server (NS) using an End Device from a different Network Operator (e.g. MXC, Swisscom) that is registered on ThingPark Exchange (TEX)](#roaming-at-a-swisscom-network-server-ns-using-an-end-device-from-a-different-network-operator-eg-mxc-swisscom-that-is-registered-on-thingpark-exchange-tex)
+  * [UX Design](#ux-design)
+    * [Proposed Roaming Integration into MXProtocol of LPWAN Supernodes](#proposed-roaming-integration-into-mxprotocol-of-lpwan-supernodes)
+* [Inter-Chain Data Market](#inter-chain-data-market-2)
+  * [Data Trading](#data-trading)
+    * [UX Design](#ux-design-1)
+    * [Class Diagram](#class-diagram)
+      * [Data Item (End Device Data) Listed on Inter-Chain Data Market & Purchase Order Granting Access with Data Validated & Certified](#data-item-end-device-data-listed-on-inter-chain-data-market--purchase-order-granting-access-with-data-validated--certified)
+    * [Swimlane (Flowchart) Diagrams](#swimlane-flowchart-diagrams-1)
+      * [Data Seller configures End Device (Sensor) Data Frames for Graphs on M2M Portal](#data-seller-configures-end-device-sensor-data-frames-for-graphs-on-m2m-portal)
+      * [Data Seller configures End Device (Sensor) Data Visualizations & Monitoring for Dashboard on Inter-Chain Data Market](#data-seller-configures-end-device-sensor-data-visualizations--monitoring-for-dashboard-on-inter-chain-data-market)
+      * [Data Seller configures Sale / Auction of End Device (Sensor) Data Listing on Inter-Chain Data Market](#data-seller-configures-sale--auction-of-end-device-sensor-data-listing-on-inter-chain-data-market)
+        * [Data Buyer Requirements](#data-buyer-requirements)
+        * [Data Buyer Choices](#data-buyer-choices)
+      * [Data Buyer Purchases / Bids for Access Grant to End Device (Sensor) Data Listing on Inter-Chain Data Market](#data-buyer-purchases--bids-for-access-grant-to-end-device-sensor-data-listing-on-inter-chain-data-market)
+        * [Data Buyer Payment Options](#data-buyer-payment-options)
+      * [Data Buyer Accesses Sensor Data Frames from Inter-Chain Decentralized App (DApp)](#data-buyer-accesses-sensor-data-frames-from-inter-chain-decentralized-app-dapp)
+  * [Data Validation](#data-validation)
+    * [External Oracles](#external-oracles)
+      * [Purpose](#purpose)
+      * [Definition](#definition)
+      * [Types](#types)
+      * [Risk Ratings](#risk-ratings)
+      * [Example](#example)
+    * [Swimlane (Flowchart) Diagrams](#swimlane-flowchart-diagrams-2)
+      * [Validate & Certify & Store External Data Frames Retrieved using Oracles, Notaries & Data Storage Backend](#validate--certify--store-external-data-frames-retrieved-using-oracles-notaries--data-storage-backend)
+  * [Data Monitoring](#data-monitoring)
+    * [Business Concept Diagram](#business-concept-diagram)
+* [Application Ecosystem](#application-ecosystem)
+* [Technical Model](#technical-model)
+  * [Consensus](#consensus)
+  * [Custom Substrate Runtime Modules](#custom-substrate-runtime-modules)
+  * [Node](#node)
+  * [Other Infrastructure](#other-infrastructure)
+* [Glossary](#glossary)
+  * [Mining](#mining-2)
+  * [Roaming](#roaming-3)
+* [Abbreviations](#abbreviations)
+  * [Mining](#mining-3)
+  * [Roaming](#roaming-4)
+* [References](#references)
+* [Appendices](#appendices)
+  * [Appendix 1: General - Technical Model of Substrate](#appendix-1-general---technical-model-of-substrate)
+    * [Integration of the Data Highway Parachain into the Polkadot network](#integration-of-the-data-highway-parachain-into-the-polkadot-network)
+  * [Appendix 2: Roaming - LoRaWAN Technology](#appendix-2-roaming---lorawan-technology)
+  * [Appendix 3: Roaming - Use Case (Alice and Bob)](#appendix-3-roaming---use-case-alice-and-bob)
+    * [Assumptions](#assumptions)
+    * [User Personas](#user-personas)
+    * [User Story](#user-story)
 
 Note: Generate a new chapter with `openssl rand -hex 3`
 
-## Introduction <a id="chapter-4cc1c8"></a>
+Note: Update the TOC by installing [markdown-toc](https://github.com/jonschlinkert/markdown-toc), and then running `cd ./node_modules/markdown-toc/ && node cli.js --bullets "*"  --no-firsth1 ../../README.md` and replacing the current TOC with the output.
+
+## Introduction
 
 The decentralised Data Highway (DH) economic system for the future of IoT will have a monetary system of the DHX token. 
 
@@ -71,7 +259,7 @@ Other roaming hubs that choose to store their roaming policies and agreements on
 
 Reference: Page 22 of https://www.mxc.org/hubfs/WP/MXC_technical_whitepaper.pdf
 
-## Goals <a id="chapter-87444b"></a>
+## Goals
 
 Reference: Page 25 of https://www.mxc.org/hubfs/WP/MXC_technical_whitepaper.pdf
 
@@ -197,7 +385,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 * Expose API endpoints, such as to access data from the data market, which may be roaming-specific. Refer to the [API](https://hackmd.io/yf7ZRzjqSn2WAAICZ75bHA?view#Technical-Model).
 
-## Roadmap <a id="chapter-1bb8f5"></a>
+## Roadmap
 
 ### January 2020
 
@@ -231,7 +419,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 * References:
   * https://medium.com/polkadot-network/polkadot-parachain-slots-f3f051d41699
 
-## Economic Configuration <a id="chapter-8d48a2"></a>
+## Economic Configuration
 
 ### Economic Variables
 
@@ -271,7 +459,7 @@ In the calculations the example exchange rate for the DHX/USD pair is 1.0.
 
 The DHX DAO may elect to make a protocol change these economic variables.
 
-## Token Issuance <a id="chapter-0bab28"></a>
+## Token Issuance
 
 ### Token Issuance Options
 
@@ -380,7 +568,7 @@ The block reward treasury fees is the amount remaining after collator fees. They
 
 #### About Halving
 
-#### Halving Event Impact & Benefits 
+#### Impact & Benefits 
 
 The DH's monetary policy may apply a halving to encourage early production (collator BAT) sparking an inflation strategy, where after each halving period the size of the block reward that is given to a collator for producing a block is halved, and the collator may share the block reward with its nominators.
 
@@ -400,15 +588,15 @@ The initial halvings have higher reward per block that provides a higher potenti
 Additionally there should be an incentive for collators to: 
 * Lower transaction fees to reduce the barrier to entry for new Data Highway users, which is also an overarching IoT goal.
 
-#### Halving Frequency
+#### Frequency
 
 Halving is the initial strategy that was chosen through optioneering to be used for the issuance of DHX through block rewards, and will be defined in the blockchain genesis configuration. The criteria was for halving to occur more frequently that every seven (7) years and less frequently than two (2) years to allow sufficient time for initial adoption.
 
-#### Halving Longevity
+#### Longevity
 
 Halving will continue until the total supply is issued or unless a protocol upgrade is made to change the strategy. 
 
-#### Halving Transparency
+#### Transparency
 
 It is important for the market to know the halving dates upfront (when the supply is scheduled to reduce) to allow gradual adaption and to avoid sharp volatility in the DHX price.
 
@@ -422,7 +610,7 @@ Historically, the Bitcoin network adopted the halving strategy as follows:
 
 * All 21 million bitcoins (BTC) will be mined by 2140. But more than 98% will be mined by 2030.
 
-## Token Acquisition <a id="chapter-72700f"></a>
+## Token Acquisition
 
 ![](https://i.imgur.com/ek8nb29.png)
 
@@ -466,7 +654,7 @@ Other means of acquiring DHX tokens at through participating as follows:
     * Combo Boost
         * Up to 1.2x their DHX staking profits (a proportion of the Token Mining boost) by both staking MXC and either staking DHX or Token Mining at the same time.
 
-## DAO <a id="chapter-050b73"></a>
+## DAO
 
 The DHX DAO allows for distributed community membership, governance, and funding.
 
@@ -527,9 +715,9 @@ Table 6: DH Cash Flow Statement
 
 Reference: https://docs.google.com/spreadsheets/d/1pVp7wXq_CxZEmt-5jHVSd1oO1txPCq_U1_drMIceTiw/edit#gid=0
 
-## Mining <a id="chapter-d9671b"></a>
+## Mining
 
-### Mining Benefits
+### Benefits
 
 * Token mining is similar to Edgeware's lockdrop and ChainX's virtual mining where participants are token holders that are rewarded for increasing the security, robustness, and liquidity of the ecosystem by locking them.
 * Other forms of mining (hardware, development, advocacy, and governance mining) provide rewards for participation by allowing more users to access the network and improving user adoption, and are analogous to token mining.
@@ -538,7 +726,7 @@ Reference: https://docs.google.com/spreadsheets/d/1pVp7wXq_CxZEmt-5jHVSd1oO1txPC
     * Loyalty reward MSBs are available.
     * Higher reputation to influence to future of the DHX DAO.
 
-### Mining Reward Options
+### Reward Options
 
 * Users will have a variety of options to acquire DHX tokens on the DH, without having to purchase them from a DEX
 * Users may participate in token mining to earn mining base rewards in DHX automatically depending on the type and quantity of their token holding in return for becoming stakeholders in the DHX DAO by locking native tokens (e.g. DHX, DOT) and bridged tokens (e.g. MXC, IOTA) that are not already staked elsewhere. Mining base rewards are funded by block reward transaction fees.
@@ -546,7 +734,7 @@ Reference: https://docs.google.com/spreadsheets/d/1pVp7wXq_CxZEmt-5jHVSd1oO1txPC
 
 Initially only automatic rewards shall be offered, which requires mining registration. In future, the DHX DAO community may choose to offer rewards that allow users to manually claim unregistered mining rewards via DHX DAO governance, but with a lower reward than registered mining.
 
-### Mining Reward Types
+### Reward Types
 
 * Mining base (MB) rewards 
     * Only for token mining
@@ -560,18 +748,18 @@ Initially only automatic rewards shall be offered, which requires mining registr
     * Only for pre-DH launch holders of MXC tokens or Secure LPWAN hardware (e.g. MatchX or similar equivalent)
 * Mining reputation rewards on the DHX DAO
 
-### Mining Fixed Term Periods
+### Fixed Term Periods
 
 * Mining fixed term periods available include:
     * 3, 6, 9, 12, 24, 36 months
 * Locking for a fixed term period attracts a higher return than indefinate terms (higher MB for token mining, and higher MSB for other forms of mining) since when users make commitments its easier to forecast the overall ecosystem.
 * Locking requires a minimum uptime to be maintained to remain eligible for the reward to incentivise users to maintain its availability.
 
-### Mining Random Sampling Dates
+### Random Sampling Dates
 
 * Random sampling dates that are chosen and used for the subsequent calculation of the sampled average balance or uptime should differ between users and are generated randomly on the start date of the fixed term period and are not revealed until the end of the fixed term period. The goal is to avoid using a single sampling date that may be gamed or may cause unncessary congestion.
 
-### Mining Reward Spending & Reinvestment
+### Reward Spending & Reinvestment
 
 * Users may use their rewards in DHX in a variety of ways:
     * Locking them on the DH as a form or reinvestment to compound their rewards for an indefinate period of time or a predefined period of time to gain exposure to Fixed Term Bonus Rewards.
@@ -580,7 +768,7 @@ Initially only automatic rewards shall be offered, which requires mining registr
     * Spend them to purchase data from the DHX Data Market.
     * Spend them to purchase Secure LPWAN hardware (e.g. MatchX or similar equivalent) as a form of diversifying their reinvestment to compound their rewards.
 
-### Mining Rules
+### Rules
 
 * Users may not participate in token mining using the MXC balances already staked at MXC Supernodes in the "Supernode Layer" from which they already receive quarterly rewards (see section "2.0 Staking Participation" https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf).
 * User mining base rewards and MSB rewards depend on the type and amount of their token holding.
@@ -640,13 +828,13 @@ MXC receives a PoP MSB approx. twice as high as using IOTA or DOT.
 
 * Example - MSB: If a user stakes as a collator or a nominator and receives a proportion of the block reward of `4` DHX for producing a block at the same time as they are participating in PoP ICBAM with IOTA for 36 months that gives a `1.1` PoP ICBAM MSB, and they also received a `1.4` PoP Non-ICBAM MSB, then they will instead receive a block reward of `4 * (1.1 + 1.4) = 6 DHX`.
 
-#### Mining Loyalty Bonus (MLB)
+### Mining Loyalty Bonus (MLB)
 
 MLB is introduced to reward long-term holders of MXC, IOTA, or DOT for their loyalty. 
 
 * Example - MLB: If a user stakes as a collator or a nominator and receives a proportion of the block reward of `4` DHX for producing a block and they were a holder of MXC for 6 months before the launch of the DH and before the time they started participating in PoP ICBAM where they locked MXC assets for 24 months, and they participated fully in PoP Non-ICBAM to receive its maximum `1.4` MSB (exceeding the PoP MDT), then their block reward's PoP ICBAM proportion would not be limited, and the total MSB would be `4 * (1.15 + 0.4 + 0.012) = 6.248 DHX per block`.
 
-#### Mining Diversity Threshold (MDT)
+### Mining Diversity Threshold (MDT)
 
 MDT is introduced to incentivise miners to diversify their means of participation to include other means of PoP instead of just ICBAM, and to maintain longevity of such diversity.
 
@@ -654,11 +842,11 @@ The "MDT Qualifying Level of PoP Non-ICBAM MSB" is the minimum level of PoP Non-
 
 * Example - MDT: If a user stakes as a collator or a nominator and receives a proportion of the block reward of `4` DHX for producing a block at the same time as they are participating in PoP ICBAM where they lock MXC assets for 24 months, and they do not participate in PoP Non-ICBAM, then their block reward's PoP ICBAM proportion would be limited to `1.10` of their block reward and the total MSB would be `4 * (1.10 + 0) = 4.11 DHX per block`. Whereas if they participated in and received a PoP Non-ICBAM of at least `1.1` then they would unlock the PoP ICBAM of `1.15` (the PoP MDT limitation would be removed) and their block reward using the total MSB would be `4 * (1.15 + 1.1) = 4.6 DHX per block`.
 
-#### Initial Asset Distribution
+### Initial Asset Distribution
 
 Prior to genesis, or before the MXC Foundation's collators and/or nominators receive their first block reward, the MXC Foundation may target and purchase a specific amount of supported assets (i.e. MXC, IOTA, DOT) from the market with a capital injection that corresponds to the amount required to be entitled (as are other PoP ICBAM participants) to receive the maximum 20% MSB on their initial stake when the associated collators get block rewards.
 
-#### Mining Financial Model
+### Financial Model
 
 Mining rewards are financed from the following sources that may be either processed automatically or through requiring manual proposals to be submitted requesting approval of funding from the DH DAO Hub:
 
@@ -808,11 +996,11 @@ Figure x: Token Mining Use Case Diagram
         * References
             * Page 6 of https://chainx.org/chainx_en.pdf
 
-#### Token Mining Transfer Bridge
+#### Transfer Bridge
 
 TODO
 
-#### Token Mining Inter-Chain Asset Mappings
+#### Inter-Chain Asset Mappings
 
 TODO
 
@@ -824,19 +1012,23 @@ TODO
 
 Figure x: DEX Use Case Diagram
 
-### Hardware Mining
+### Hardware Mining (Hardware as Collateral)
 
-#### Hardware Mining Goals
+#### Background & Benefits
+
+* Allows users who participate in the MXC network by contributing hardware (e.g. Secure or Insecure LPWAN Hardware Gateways or End Devices) collateral to profit in DHX.
+
+#### Goals
 
 * Hardware reward goals are to incentivize participation and the purchase or upgrade (if necessary) to secure hardware on the DH.
 
-#### Hardware Mining Costs
+#### Costs
 
 * Risk or opportunity of:
     * Purchasing Secure LPWAN hardware (if necessary)
     * Choosing a plan to lock the hardware for a fixed period, where the hardware has an average RRP that may depreciate over time.
 
-#### Hardware Mining Registration
+#### Registration
 
 * Integration with the M2M Wallet of the MXProtocol Server
     * Shared identity of the organisation is linked between the DH and M2M Portal.
@@ -845,7 +1037,7 @@ Figure x: DEX Use Case Diagram
     * Record on the DH whether the identity runs hardware associated with any DH consensus nodes (e.g. collator).
     * Communicate the desired fixed term period for locking the hardware associated with their identity via the DH UI.
 
-#### Hardware Mining Reward Calculation
+#### Reward Calculation
 
 * Reward entitlements for Hardware Mining for a Fixed Term Period are calculated from:
     * Check the hardware's online status and at the start of a fixed period.
@@ -858,145 +1050,6 @@ Figure x: DEX Use Case Diagram
 ![](https://i.imgur.com/Ypracwf.png)
 
 Figure x: Hardware Mining Use Case Diagram
-
-### Development Mining
-
-#### Development Mining Goals
-
-* Development reward goals are to incentivize diversity and innovation of UX interactions and standards to grow participation on the DH.
-
-#### Development Mining Costs
-
-* Risk or opportunity of:
-    * Automated reward claims:
-        * Building DApp
-        * Marketing the DApp to attract users
-        * Purchasing hosting and domain name registration (if necessary)
-        * Choosing a plan to lock the DApp for monitoring user activity over a fixed period.
-    * Manual reward claims
-        * Questions raised on the DH Development Hub that are accepted.
-        * Proposals that tag issues and opportunities on the DH Development Hub that are accepted.
-        * Reviews that tag issues and opportunities on the DH Development Hub that are accepted.
-        * Updates that tag issues and opportunities on the DH Development Hub that are accepted.
-
-#### Development Mining Tags
-
-* Tags
-    * Task Category
-    * Task Size
-    * Code Type (e.g. bug, hotfix, feature)
-    * Bounty Size
-    * Reputation Reward Level
-    * Breaking Changes
-    * Documentation
-    * Tests
-    * Refactor
-
-#### Development Mining Registration
-
-* Integrate DH Identity Authentication into the DApp
-* Register the DApp in the list within the DH UI
-* Communicating the desired fixed term period for monitoring user activity from their DApp via the DH UI.
-
-#### Development Mining Reward Calculation
-
-* Reward entitlements for Development Mining for a Fixed Term Period are calculated from:
-    * Check the DApp's uptime status and at the start of a fixed period.
-    * Check the DApps's uptime status at "random sampling dates".
-    * Verify the type of DApp (e.g. Data Market, Mining, or Staking).
-    * Calculate the "sampled average" DApp uptime status over the period to determine eligibility.
-    * Eligibility for level of reward and reputation is influenced by:
-        * "Sampled average" DApp user activity using their API keys exceeding predefined thresholds
-            * Data Market API activity including data seller sale levels or data buyer purchase levels
-            * Mining API actvity
-            * Staking API activity
-    * Adjustment resulting from governance audits.
-
-![](https://i.imgur.com/FP4SK1a.png)
-
-Figure x: Development Mining Use Case Diagram
-
-### Advocacy Mining
-
-#### Advocacy Mining Goals
-
-* Advocacy reward goals are to incentivize strategic marketing planning and activities to grow participation on the DH.
-
-#### Advocacy Mining Costs
-
-* Risk or opportunity of:
-    * Automated reward claims
-        * Referrals linking to their DH identity when shared with other users that sign up to the DH.
-    * Manual rewardable claims
-        * Creating a question or proposal on the DH DAO Hub
-        * Reviewing, updating or approving questions, proposals, or deliverables on the DH DAO Hub
-
-#### Advocacy Mining Tags
-
-* Tags
-    * Task Category
-    * Task Size
-    * Medium 
-    * Report Type (e.g. blogpost, critique, feedback, suggestions, guide)
-    * Bounty Size
-    * Reputation Reward Level
-    * Difficulty Level
-    * Priority Level
-
-#### Advocacy Mining Registration
-
-* Automated reward claims
-    * Share referral link to their DH identity with other users that sign up to the DH.
-* Manual rewardable claims
-    * Authenticate DH identity and link to their interactions on the DH DAO Hub
-    * Register intention to advocate in the user list within the DH UI.
-    * Communicating the desired fixed term period they intend to advocate on the DH DAO Hub via the DH UI.
-
-#### Advocacy Mining Reward Calculation
-
-* Automated and manual rewardable claims
-    * Reward entitlements for Advocacy Mining for a Fixed Term Period are calculated from:
-        * Checking referral links that result in new DH accounts being activated and used.
-        * Checking questions raised on the DH Development Hub that are accepted.
-        * Checking proposals that tag issues and opportunities on the DH Development Hub that are accepted.
-        * Checking reviews that tag issues and opportunities on the DH Development Hub that are accepted.
-        * Checking updates that tag issues and opportunities on the DH Development Hub that are accepted.
-        * Eligibility for level of reward and reputation is determined.
-        * Adjustment resulting from governance audits.
-
-![](https://i.imgur.com/iK8TngJ.png)
-
-Figure x: Advocacy Mining Use Case Diagram
-
-### Governance Mining
-
-#### Governance Mining Goals
-
-TODO
-
-#### Governance Mining Costs
-
-TODO
-
-#### Governance Mining Registration
-
-TODO
-
-#### Governance Mining Reward Calculation
-
-![](https://i.imgur.com/AnhAbuZ.png)
-
-Figure x: Governance (Council Election) Mining Use Case Diagram
-
-![](https://i.imgur.com/V3Js4D5.png)
-
-Figure x: Governance (Democracy) Mining Use Case Diagram
-
-### Hardware Assets Mining (Hardware as Collateral)
-
-#### Background & Benefits
-
-* Allows users who participate in the MXC network by contributing hardware (e.g. Secure or Insecure LPWAN Hardware Gateways or End Devices) collateral to profit in DHX
 
 #### Rights
 
@@ -1053,13 +1106,68 @@ Table 1.5: Hardware Assets Mining MSB
 
 * Incubate Runtime & DApp development on Data Highway through DHX funding (e.g. DApps, Bounties)
 
+#### Goals
+
+* Development reward goals are to incentivize diversity and innovation of UX interactions and standards to grow participation on the DH.
+
+#### Costs
+
+* Risk or opportunity of:
+    * Automated reward claims:
+        * Building DApp
+        * Marketing the DApp to attract users
+        * Purchasing hosting and domain name registration (if necessary)
+        * Choosing a plan to lock the DApp for monitoring user activity over a fixed period.
+    * Manual reward claims
+        * Questions raised on the DH Development Hub that are accepted.
+        * Proposals that tag issues and opportunities on the DH Development Hub that are accepted.
+        * Reviews that tag issues and opportunities on the DH Development Hub that are accepted.
+        * Updates that tag issues and opportunities on the DH Development Hub that are accepted.
+
+#### Tags
+
+* Tags
+    * Task Category
+    * Task Size
+    * Code Type (e.g. bug, hotfix, feature)
+    * Bounty Size
+    * Reputation Reward Level
+    * Breaking Changes
+    * Documentation
+    * Tests
+    * Refactor
+
+#### Registration
+
+* Integrate DH Identity Authentication into the DApp
+* Register the DApp in the list within the DH UI
+* Communicating the desired fixed term period for monitoring user activity from their DApp via the DH UI.
+
+#### Reward Calculation
+
+* Reward entitlements for Development Mining for a Fixed Term Period are calculated from:
+    * Check the DApp's uptime status and at the start of a fixed period.
+    * Check the DApps's uptime status at "random sampling dates".
+    * Verify the type of DApp (e.g. Data Market, Mining, or Staking).
+    * Calculate the "sampled average" DApp uptime status over the period to determine eligibility.
+    * Eligibility for level of reward and reputation is influenced by:
+        * "Sampled average" DApp user activity using their API keys exceeding predefined thresholds
+            * Data Market API activity including data seller sale levels or data buyer purchase levels
+            * Mining API actvity
+            * Staking API activity
+    * Adjustment resulting from governance audits.
+
+![](https://i.imgur.com/FP4SK1a.png)
+
+Figure x: Development Mining Use Case Diagram
+
 #### Rights
 
-Same as Token Asset Mining
+Same as Token Mining
 
 #### Financial Model
 
-Same as Token Asset Mining
+Same as Token Mining
 
 ### Advocacy Mining (Marketing as Collateral)
 
@@ -1067,13 +1175,63 @@ Same as Token Asset Mining
 
 * Incubate Runtime & DApp development on Data Highway through DHX funding (e.g. Referrals, Publications, Presentations, Ambassadors, Sponsors)
 
+#### Goals
+
+* Advocacy reward goals are to incentivize strategic marketing planning and activities to grow participation on the DH.
+
+#### Costs
+
+* Risk or opportunity of:
+    * Automated reward claims
+        * Referrals linking to their DH identity when shared with other users that sign up to the DH.
+    * Manual rewardable claims
+        * Creating a question or proposal on the DH DAO Hub
+        * Reviewing, updating or approving questions, proposals, or deliverables on the DH DAO Hub
+
+#### Tags
+
+* Tags
+    * Task Category
+    * Task Size
+    * Medium 
+    * Report Type (e.g. blogpost, critique, feedback, suggestions, guide)
+    * Bounty Size
+    * Reputation Reward Level
+    * Difficulty Level
+    * Priority Level
+
+#### Registration
+
+* Automated reward claims
+    * Share referral link to their DH identity with other users that sign up to the DH.
+* Manual rewardable claims
+    * Authenticate DH identity and link to their interactions on the DH DAO Hub
+    * Register intention to advocate in the user list within the DH UI.
+    * Communicating the desired fixed term period they intend to advocate on the DH DAO Hub via the DH UI.
+
+#### Reward Calculation
+
+* Automated and manual rewardable claims
+    * Reward entitlements for Advocacy Mining for a Fixed Term Period are calculated from:
+        * Checking referral links that result in new DH accounts being activated and used.
+        * Checking questions raised on the DH Development Hub that are accepted.
+        * Checking proposals that tag issues and opportunities on the DH Development Hub that are accepted.
+        * Checking reviews that tag issues and opportunities on the DH Development Hub that are accepted.
+        * Checking updates that tag issues and opportunities on the DH Development Hub that are accepted.
+        * Eligibility for level of reward and reputation is determined.
+        * Adjustment resulting from governance audits.
+
+![](https://i.imgur.com/iK8TngJ.png)
+
+Figure x: Advocacy Mining Use Case Diagram
+
 #### Rights
 
-Same as Token Asset Mining
+Same as Token Mining
 
 #### Financial Model
 
-Same as Token Asset Mining
+Same as Token Mining
 
 ### Governance Mining (Governance as Collateral)
 
@@ -1081,19 +1239,41 @@ Same as Token Asset Mining
 
 * Incubate Runtime & DApp development on Data Highway through DHX funding (e.g. Governance, Voting)
 
+#### Goals
+
+TODO
+
+#### Costs
+
+TODO
+
+#### Registration
+
+TODO
+
+#### Reward Calculation
+
+![](https://i.imgur.com/AnhAbuZ.png)
+
+Figure x: Governance (Council Election) Mining Use Case Diagram
+
+![](https://i.imgur.com/V3Js4D5.png)
+
+Figure x: Governance (Democracy) Mining Use Case Diagram
+
 #### Rights
 
-Same as Token Asset Mining
+Same as Token Mining
 
 #### Financial Model
 
-Same as Token Asset Mining
+Same as Token Mining
 
-## Roaming <a id="chapter-6c4c97"></a>
+## Roaming
 
-### Roaming Economics
+### Economics
 
-#### Roaming Payment and Monthly Audit Process
+#### Payment and Monthly Audit Process
 
 DHX tokens may be used to purchase access to roaming.
 
@@ -1122,7 +1302,7 @@ End Device roaming packets and associated Network Servers that forward them are 
 
 Monthly payments are calculated on the Data Highway (for subscription payment plan) and DHX billing, charging, and payments are done automatically.
 
-#### Roaming Transaction Fees (Subscription-based or Ad-Hoc Usage)
+#### Transaction Fees (Subscription-based or Ad-Hoc Usage)
 
 Each of the initial 21 Supernodes (SNs) need to top-up MXC to get a sufficient amount in their SN to be able achieve a threshold holding that will allow them to generate a unique NetID (Network ID) that's associated with their SN and will be recorded on-chain.
 
@@ -1146,7 +1326,7 @@ Note that this is separate from staking where a user who is an MXC holder choose
 
 Network Operators may benefit from interoperability through decentralised DNS and earn DHX from roaming fees. Network Operators outside of the MXC network may always access the MXC network's decentralised DNS that is provided by the Data Highway, and they may choose to either establish publicly accessible decentralized roaming policies directly on the Data Highway or to update existing roaming policies (e.g. on ThingPark Exchange) and create new agreements (e.g. with MXC Foundation on ThingPark Exchange)
 
-#### Roaming Operations Fees
+#### Operations Fees
 
 Supernodes earn DHX from these Roaming Transaction Fees and are responsible for **distributing** a cut toward different **Roaming Operations Fees** depending on whether the owner of the End Device pays a Subscription or just pays for Ad-Hoc usage of roaming. 
 
@@ -1195,7 +1375,7 @@ The fees may be changed by upgrading the Data Highway parachain by using the Sud
   * Relay Chain Transaction Fees - https://research.web3.foundation/en/latest/polkadot/Token%20Economics/#relay-chain-transaction-fees
   * Inflation Model - http://research.web3.foundation/en/latest/polkadot/Token%20Economics/#inflation-model
 
-#### Roaming Risks & Mitigation Measures
+#### Risks & Mitigation Measures
 
 Potential spammers of the public transaction pool that may cause congestion shall be mitigated by using a fee-based spam prevention mechanism as a deterent.
 
@@ -1203,7 +1383,7 @@ End Devices should be cautious of roaming where "visited" network servers (or Su
 
 Refer to Roaming Operations Fees.
 
-#### Roaming Token Acquisition (DHX)
+#### Token Acquisition (DHX)
 
 The new DHX token is only used for:
 1. Roaming fees
@@ -1215,9 +1395,9 @@ The new DHX token is only used for:
 * DHX tokens may be also be obtained in future for MXC tokens through a DEX (see Inter-Chain Data Market Whitepaper)
 * See the "DHX Token Acquisition" section of the Inter-Chain Data Market Whitepaper for further details.
 
-### Roaming Data Storage
+### Data Storage
 
-#### Roaming Storage Requirements
+#### Storage Requirements
 
 End Device information that should be stored on the Data Highway includes:
 
@@ -1231,7 +1411,7 @@ End Device information that should be stored on the Data Highway includes:
 * Smart Machine Bidding (SMB) and Forwarding Parameters:
   * Packets of data (count/nonce) that the End Device and Network Servers have exchanged, who else was party to the exchange and owes or is owed DHX for roaming.
 
-#### Roaming Storage Periodic Maintenance and Migration
+#### Storage Periodic Maintenance and Migration
 
 Data Highway nodes should be able to be run on servers without storing unnecessary data.
 
@@ -1245,7 +1425,7 @@ Data Highway nodes may be run with `pruning=1000000` to discard historical data 
 
 Other data that was stored in historic blocks (e.g. whether there is sufficient balance to be a Supernode, and the "home" NS associated with an End Device, etc) may still be required and should be migrated to a newer block that is not part of the historic blocks that are to be pruned.
 
-### Roaming Architecture
+### Architecture
 
 #### Class Diagrams
 
@@ -1324,7 +1504,7 @@ Source: register_supernode
 
 Source: register_supernode
 
-### Roaming Use Cases
+### Use Cases
 
 #### Roaming with MXC End Device between Supernodes Registered on MXC Network
 
@@ -1380,7 +1560,7 @@ Source: roaming_class_diagram
 
 Source: roaming_ux
 
-## Inter-Chain Data Market <a id="chapter-2a3ac1"></a>
+## Inter-Chain Data Market
 
 ### Data Trading
 
@@ -1546,11 +1726,11 @@ Example combinations of cloud-based services (or similar equivalent):
 
 * Reference: https://www.loomsystems.com/blog/single-post/2017/06/07/prometheus-vs-grafana-vs-graphite-a-feature-comparison
 
-## Application Ecosystem <a id="chapter-666c5a"></a>
+## Application Ecosystem
 
 TODO
 
-## Technical Model <a id="chapter-822b5d"></a>
+## Technical Model
 
 The DH is a Substrate-based chain.
 
@@ -1794,7 +1974,7 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
         * Substrate Light Client UI
             * Reference: https://github.com/paritytech/substrate-light-ui
 
-## Glossary <a id="chapter-2e4982"></a>
+## Glossary
 
 ### Mining
 
@@ -1816,7 +1996,7 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
 * Roaming Hub - Star Interconnection where a Roaming Hub is inserted using a Serving Network Server, since configuration and management of Mesh Interconnection (of Network Servers and Join Servers) does not scale
 * SNS - Serving Network Server
 
-## Abbreviations <a id="chapter-461289"></a>
+## Abbreviations
 
 ### Mining
 
@@ -1853,7 +2033,7 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
 * TPS - Transactions Per Second
 * VNS - Visted Network Server
 
-## References <a id="chapter-24ba9b"></a>
+## References
 
 * [1] https://royalsocietypublishing.org/doi/full/10.1098/rsos.180298
 * [2] "A Survey on Consensus Mechanisms and Mining Strategy Management in Blockchain Networks" - https://arxiv.org/abs/1805.02707
@@ -1869,7 +2049,7 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
 * [12] https://www.investopedia.com/ask/answers/100314/whats-difference-between-monetary-policy-and-fiscal-policy.asp
 * [13] https://chainx.org/chainx_en.pdf
 
-## Appendices <a id="chapter-432af7"></a>
+## Appendices
 
 ### Appendix 1: General - Technical Model of Substrate
 
