@@ -1,0 +1,31 @@
+body {
+  color: #000;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4em;
+}
+
+img {
+  max-width: 960px;
+  width: 100%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+code {
+  font-size: 12px;
+}

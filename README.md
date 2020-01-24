@@ -4,9 +4,15 @@
 *Read this in other languages: [English](README.md), [한국어](README.ko.md), [日本語](README.ja.md), [简体中文](README.zh-cn.md), [正體中文](README.zh-tw.md).*
 <!-- https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
 
+[DOWNLOAD](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/v1/whitepaper.pdf)
+
 ## Contributions
 
 To contribute edits to this whitepaper, please submit pull requests to this repository with your changes.
+
+### Releases
+
+Refer to steps outlined in [CONTRIBUTING](./CONTRIBUTING.md).
 
 ## Questions
 
