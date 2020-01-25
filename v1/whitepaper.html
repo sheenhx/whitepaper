@@ -1,36 +1,6 @@
 <!DOCTYPE html><html><head>
 	<meta charset="utf-8">
-<style type="text/css">body { }</style><style type="text/css">body {
-  color: #000;
-  font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4em;
-}
-
-img {
-  max-width: 960px;
-  width: 100%;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
-}
-
-code {
-  font-size: 12px;
-}/*# sourceURL=./style.css*/</style><style type="text/css">/*
+<style type="text/css">body { } .dh-logo-readme, .download-whitepaper { display: none; }</style><style type="text/css">/*
 Monokai style - ported by Luigi Maselli - http://grigio.org
 */
 
@@ -100,17 +70,55 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .hljs-selector-id {
   font-weight: bold;
 }
-/*# sourceURL=/Users/ls/.nvm/versions/node/v13.3.0/lib/node_modules/md-to-pdf/node_modules/highlight.js/styles/monokai.css*/</style></head>
+/*# sourceURL=/Users/ls/.nvm/versions/node/v13.3.0/lib/node_modules/md-to-pdf/node_modules/highlight.js/styles/monokai.css*/</style><style type="text/css">body {
+  color: #000;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4em;
+}
+
+img {
+  max-width: 960px;
+  width: 100%;
+  /* Restrict certain images from wrapping across multiple pages
+  page-break-after: always;
+  max-height: 960px;
+  */
+}
+
+.logo {
+  float: right !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+code {
+  font-size: 12px;
+}/*# sourceURL=./style.css*/</style></head>
 <body class="markdown-body">
-<h1 id="data-highways-economic-whitepaper">Data Highway’s Economic Whitepaper</h1>
-<p><em>Read this in other languages: <a href="README.md">English</a>, <a href="README.ko.md">한국어</a>, <a href="README.ja.md">日本語</a>, <a href="README.zh-cn.md">简体中文</a>, <a href="README.zh-tw.md">正體中文</a>.</em></p>
+<h1 id="data-highways-economic-whitepaper-img-srcimagesdh-logo-whitepng-width30px-height30px-classdh-logo-readme">Data Highway’s Economic Whitepaper <img src="./images/dh-logo-white.png" width="30px" height="30px" class="dh-logo-readme"></h1>
+<p><span class="language-options" style="font-style: italic;">Read this in other languages: <a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.md">English</a>, <a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.ko.md">한국어</a>, <a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.ja.md">日本語</a>, <a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.zh-cn.md">简体中文</a>, <a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.zh-tw.md">正體中文</a></span></p>
 <!-- https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
 
-<p><a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/v1/whitepaper.pdf" class="download-whitepaper" style="font-size:1.5em; font-weight: 700; color: #0ffff !important">DOWNLOAD WHITEPAPER</a></p>
+<p><a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/v1/whitepaper.pdf" class="download-whitepaper" style="margin: 40px; font-size:1.5em; font-weight: 700; color: #00aaff !important">DOWNLOAD WHITEPAPER</a></p>
 <h2 id="contributions">Contributions</h2>
 <p>To contribute edits to this whitepaper, please submit pull requests to this repository with your changes.</p>
 <h3 id="releases">Releases</h3>
-<p>Refer to steps outlined in <a href="./CONTRIBUTING.md">CONTRIBUTING</a>.</p>
+<p>Refer to steps outlined in <a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/CONTRIBUTING.md">CONTRIBUTING</a>.</p>
 <h2 id="questions">Questions</h2>
 <p>If you have any questions, please join the <a href="https://discord.gg/KGTbv9Z">DataHighway Discord</a> and ask in the #general channel.</p>
 <h1 id="table-of-contents">Table of Contents</h1>
@@ -434,7 +442,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 <p>Data Highway (DH) is an implementation of an open-source and fully decentralised roaming service that allows LoRaWAN IoT End Devices that have enabled roaming to move out of the network coverage area of their “home” Network Server and into the network coverage area of a “visited” Network Server, where the “visited” Network Server may query the Data Highways distributed ledger (database storage) to retrieve information such as whether the device has enabled roaming, and whether an individual party to party (bilateral) roaming agreement has been established between the Network Operator of the “visited” Network Server and the Network Operator of the “home” Network Server. If the roaming join request is accepted then the packets of data that are uplinked when roaming will be forwarded such that Data Consumers gain continuous access to the data.</p>
 <p>The Network Server’s are referred to as Supernodes if they have purchased a Network ID and belong to the MXC Network).</p>
 <p>It will be compatible with the latest <a href="https://lora-alliance.org/sites/default/files/2018-04/lorawantm-backend-interfaces-v1.0.pdf">LoRaWAN Backend Interface Specification</a>. A public API will be exposed that anyone (including but not limited to LoRa Alliance DNS Operators and LoRa Alliance members) may access to allow them to setup and immutably store and retrieve information about roaming network operators (decentralized LPWAN DNS Service), networks (decentralised LPWAN Roaming Service, including purchase price for network ids), users (and their priveleges), organizations, roaming policies (accounting, billing, charging, adjustments), and profiles (routing, service).</p>
-<p>Supernodes implement the MXProtocol and provide a user-interface (UI). This UI shall be updated to allow Supernode owners and stakeholders to interact with this API, as shown in these <a href="https://hackmd.io/peGpQwflT8C_fa823wSCvw?view#Proposed-Roaming-Integration-into-MXProtocol-of-LPWAN-Supernodes">proposed changes</a>.</p>
+<p>Supernodes implement the MXProtocol and provide a user-interface (UI). This UI shall be updated to allow Supernode owners and stakeholders to interact with this API, as shown in these <a href="#Proposed-Roaming-Integration-into-MXProtocol-of-LPWAN-Supernodes">proposed changes</a>.</p>
 <p>Other roaming hubs that choose to store their roaming policies and agreements on the Data Highway will be supported in their efforts. Alternatively the MXC Foundation gGmbH will facilitate the bridge between other centralized and decentralized roaming hubs and the Data Highway.</p>
 <p>Reference: Page 22 of <a href="https://www.mxc.org/hubfs/WP/MXC_technical_whitepaper.pdf">https://www.mxc.org/hubfs/WP/MXC_technical_whitepaper.pdf</a></p>
 <h2 id="goals">Goals</h2>
@@ -459,7 +467,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 <p><img src="https://i.imgur.com/7RQpnui.jpg" alt=""></p>
 <p>Figure: MXProtocol Architecture</p>
 <p>Reference: Page 2 of <a href="https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf">MXC’s Data Economy Whitepaper</a></p>
-<p>MXProtocol Architecture is implemented into the LPWAN App Server and LPWAN Server codebases, which are based on ChirpStack’s LoRa App Server and LoRa Server respectively. Refer to the summary of <a href="https://hackmd.io/peGpQwflT8C_fa823wSCvw?view#Appendix-2-LoRaWAN-Technology">LoRaWAN Technology</a></p>
+<p>MXProtocol Architecture is implemented into the LPWAN App Server and LPWAN Server codebases, which are based on ChirpStack’s LoRa App Server and LoRa Server respectively. Refer to the summary of <a href="#Appendix-2-LoRaWAN-Technology">LoRaWAN Technology</a></p>
 <p><img src="https://i.imgur.com/SAcZlI3.png" alt=""></p>
 <p>Figure: LoRa App Server Architecture (Source: <a href="https://www.loraserver.io/lora-app-server/overview/">https://www.loraserver.io/lora-app-server/overview/</a>)</p>
 <h4 id="compatibility-with-the-lora-alliance">Compatibility with the LoRa Alliance</h4>
@@ -510,7 +518,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 <li><a href="https://www.mxc.org/hubfs/downloads/mxc_smb_whitepaper.pdf">https://www.mxc.org/hubfs/downloads/mxc_smb_whitepaper.pdf</a></li>
 </ul>
 <h3 id="external-oracle">External Oracle</h3>
-<p>Refer to <a href="https://hackmd.io/yf7ZRzjqSn2WAAICZ75bHA?view#Data-Validation">Data Validation</a> section.</p>
+<p>Refer to <a href="#Data-Validation">Data Validation</a> section.</p>
 <h3 id="scalability">Scalability</h3>
 <p>The Data Highway will be a Polkadot parachain that is forecast to support at least 10 TPS. Refer to quote from reference document below, which was reviewed by Dr Gavin Wood. Quote from the blog post:</p>
 <p>*”Depending on the block production algorithm and parameters, the transaction throughput of each chain can vary, and thus the overall throughput of the Polkadot network can only be estimated. The first version of Polkadot will allow up to 100 parachains, and assuming each can support at least 10 transactions per second (TPS), a lower bound on throughput would be about 1000 TPS.”*</p>
@@ -541,7 +549,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 </ul>
 <h3 id="api">API</h3>
 <ul>
-<li>Expose API endpoints, such as to access data from the data market, which may be roaming-specific. Refer to the <a href="https://hackmd.io/yf7ZRzjqSn2WAAICZ75bHA?view#Technical-Model">API</a>.</li>
+<li>Expose API endpoints, such as to access data from the data market, which may be roaming-specific. Refer to the <a href="#Technical-Model">API</a>.</li>
 </ul>
 <h2 id="roadmap">Roadmap</h2>
 <h3 id="january-2020">January 2020</h3>
@@ -1559,7 +1567,7 @@ Supernode owner user establishes payment conditions for roaming, such as:</li>
 <p>Monthly payments are calculated on the Data Highway (for subscription payment plan) and DHX billing, charging, and payments are done automatically.</p>
 <h4 id="transaction-fees-subscription-based-or-ad-hoc-usage">Transaction Fees (Subscription-based or Ad-Hoc Usage)</h4>
 <p>Each of the initial 21 Supernodes (SNs) need to top-up MXC to get a sufficient amount in their SN to be able achieve a threshold holding that will allow them to generate a unique NetID (Network ID) that’s associated with their SN and will be recorded on-chain.</p>
-<p>End Devices that is activated at their “home” Supernode, once activated, will have had a DevAddr stored on the End Device, which contains a NwkAddr (which is derived from the “home” Supernode’s unique Network ID). The LPWAN Server (Supernode powered by MXProtocol) will then make one or more POST request from the LPWAN App Server codebase to the Data Highway to store roaming related information about that End Device on the distributed ledger database (under the RoamingBaseProfile class’s <code>devAddr</code> and <code>homeNet</code> properties of the EndDevice class), as shown in the Roaming Class Diagram <a href="https://hackmd.io/mISvYh4-RTq3fNxrkThzUg?view#Class-Diagrams">https://hackmd.io/mISvYh4-RTq3fNxrkThzUg?view#Class-Diagrams</a>. </p>
+<p>End Devices that is activated at their “home” Supernode, once activated, will have had a DevAddr stored on the End Device, which contains a NwkAddr (which is derived from the “home” Supernode’s unique Network ID). The LPWAN Server (Supernode powered by MXProtocol) will then make one or more POST request from the LPWAN App Server codebase to the Data Highway to store roaming related information about that End Device on the distributed ledger database (under the RoamingBaseProfile class’s <code>devAddr</code> and <code>homeNet</code> properties of the EndDevice class), as shown in the <a href="#Class-Diagrams">Roaming Class Diagram</a>. </p>
 <p>End Device owners may subscribed to roaming or pay ad-hoc roaming fees in DHX to gain sufficient balance to roam. This will be recorded under the RoamingBaseProfile class’s <code>expiry</code> date property of the EndDevice class).</p>
 <p>Supernodes earn DHX from these Roaming Transaction Fees and are responsible distributing a cut in accordance with <strong>Roaming Operations Fees</strong>.</p>
 <p>End Devices may only be allowed to roam at a “visited” Network Server (or Supernode) when:</p>
@@ -1570,7 +1578,7 @@ Supernode owner user establishes payment conditions for roaming, such as:</li>
 <li>The “visited” network server (if not a Supernode) supports the MXProtocol (i.e. supports querying decentralized DNS of the Data Highway to find the “home” network server or Supernode, and retrieving the roaming policies and agreements, if any) or similar equivalent.</li>
 </ul>
 <p>In the situation where the End Device tries to roam by attempting to join a “visited” Supernode, that “visited” Supernode will check for the DevAddr in the uplinked packets, then make a query from the LPWAN App Server codebase (written in GoLang and powered by MXProtocol) to the Data Highway to lookup whether roaming fees have been paid by that End Device (stored under the RoamingBaseProfile class’s <code>expiry</code> date property of the EndDevice class), and if so it will return “home” Supernode’s IP address (if the Network ID is recognizable), otherwise it will just drop the uplinked packets.</p>
-<p>If the End Device owner changed it’s roaming configuration (in the UI, see <a href="https://hackmd.io/mISvYh4-RTq3fNxrkThzUg?view#Intuitive-UX">https://hackmd.io/mISvYh4-RTq3fNxrkThzUg?view#Intuitive-UX</a>) but the transaction was still pending, then the Supernode could still find out if that’s the case by querying the <code>pending_extrinsics</code> of the Data Highway parachain.</p>
+<p>If the End Device owner changed it’s roaming configuration (in the UI, see <a href="#Intuitive-UX">Intuitive-UX</a>) but the transaction was still pending, then the Supernode could still find out if that’s the case by querying the <code>pending_extrinsics</code> of the Data Highway parachain.</p>
 <p>Note that this is separate from staking where a user who is an MXC holder chooses one of the 21 Supernodes and participates in staking by depositing their MXC in it to earn DHX depending on how much data that Supernode processes.</p>
 <p>Network Operators may benefit from interoperability through decentralised DNS and earn DHX from roaming fees. Network Operators outside of the MXC network may always access the MXC network’s decentralised DNS that is provided by the Data Highway, and they may choose to either establish publicly accessible decentralized roaming policies directly on the Data Highway or to update existing roaming policies (e.g. on ThingPark Exchange) and create new agreements (e.g. with MXC Foundation on ThingPark Exchange)</p>
 <h4 id="operations-fees">Operations Fees</h4>

@@ -8,6 +8,14 @@ body {
 img {
   max-width: 960px;
   width: 100%;
+  /* Restrict certain images from wrapping across multiple pages
+  page-break-after: always;
+  max-height: 960px;
+  */
+}
+
+.logo {
+  float: right !important;
 }
 
 a:link {

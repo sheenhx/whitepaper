@@ -1,10 +1,10 @@
 
-# Data Highway's Economic Whitepaper
+# Data Highway's Economic Whitepaper <img src='./images/dh-logo-white.png' width='30px' height='30px' class='dh-logo-readme'>
 
-*Read this in other languages: [English](README.md), [한국어](README.ko.md), [日本語](README.ja.md), [简体中文](README.zh-cn.md), [正體中文](README.zh-tw.md).*
+<span class="language-options" style='font-style: italic;'>Read this in other languages: [English](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.md), [한국어](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.ko.md), [日本語](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.ja.md), [简体中文](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.zh-cn.md), [正體中文](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.zh-tw.md)</span>
 <!-- https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
 
-<a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/v1/whitepaper.pdf" class="download-whitepaper" style="font-size:1.5em; font-weight: 700; color: #0ffff !important">DOWNLOAD WHITEPAPER</a>
+<a href="https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/v1/whitepaper.pdf" class="download-whitepaper" style="margin: 40px; font-size:1.5em; font-weight: 700; color: #00aaff !important">DOWNLOAD WHITEPAPER</a>
 
 ## Contributions
 
@@ -12,7 +12,7 @@ To contribute edits to this whitepaper, please submit pull requests to this repo
 
 ### Releases
 
-Refer to steps outlined in [CONTRIBUTING](./CONTRIBUTING.md).
+Refer to steps outlined in [CONTRIBUTING](https://github.com/DataHighway-com/whitepaper/blob/master/CONTRIBUTING.md).
 
 ## Questions
 
@@ -259,7 +259,7 @@ The Network Server's are referred to as Supernodes if they have purchased a Netw
 
 It will be compatible with the latest [LoRaWAN Backend Interface Specification](https://lora-alliance.org/sites/default/files/2018-04/lorawantm-backend-interfaces-v1.0.pdf). A public API will be exposed that anyone (including but not limited to LoRa Alliance DNS Operators and LoRa Alliance members) may access to allow them to setup and immutably store and retrieve information about roaming network operators (decentralized LPWAN DNS Service), networks (decentralised LPWAN Roaming Service, including purchase price for network ids), users (and their priveleges), organizations, roaming policies (accounting, billing, charging, adjustments), and profiles (routing, service).
 
-Supernodes implement the MXProtocol and provide a user-interface (UI). This UI shall be updated to allow Supernode owners and stakeholders to interact with this API, as shown in these [proposed changes](https://hackmd.io/peGpQwflT8C_fa823wSCvw?view#Proposed-Roaming-Integration-into-MXProtocol-of-LPWAN-Supernodes).
+Supernodes implement the MXProtocol and provide a user-interface (UI). This UI shall be updated to allow Supernode owners and stakeholders to interact with this API, as shown in these [proposed changes](#Proposed-Roaming-Integration-into-MXProtocol-of-LPWAN-Supernodes).
 
 Other roaming hubs that choose to store their roaming policies and agreements on the Data Highway will be supported in their efforts. Alternatively the MXC Foundation gGmbH will facilitate the bridge between other centralized and decentralized roaming hubs and the Data Highway.
 
@@ -299,7 +299,7 @@ Figure: MXProtocol Architecture
 
 Reference: Page 2 of [MXC's Data Economy Whitepaper](https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf)
 
-MXProtocol Architecture is implemented into the LPWAN App Server and LPWAN Server codebases, which are based on ChirpStack's LoRa App Server and LoRa Server respectively. Refer to the summary of [LoRaWAN Technology](https://hackmd.io/peGpQwflT8C_fa823wSCvw?view#Appendix-2-LoRaWAN-Technology)
+MXProtocol Architecture is implemented into the LPWAN App Server and LPWAN Server codebases, which are based on ChirpStack's LoRa App Server and LoRa Server respectively. Refer to the summary of [LoRaWAN Technology](#Appendix-2-LoRaWAN-Technology)
 
 ![](https://i.imgur.com/SAcZlI3.png)
 
@@ -355,7 +355,7 @@ Reference:
 
 ### External Oracle
 
-Refer to [Data Validation](https://hackmd.io/yf7ZRzjqSn2WAAICZ75bHA?view#Data-Validation) section.
+Refer to [Data Validation](#Data-Validation) section.
 
 ### Scalability
 
@@ -389,7 +389,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 ### API
 
-* Expose API endpoints, such as to access data from the data market, which may be roaming-specific. Refer to the [API](https://hackmd.io/yf7ZRzjqSn2WAAICZ75bHA?view#Technical-Model).
+* Expose API endpoints, such as to access data from the data market, which may be roaming-specific. Refer to the [API](#Technical-Model).
 
 ## Roadmap
 
@@ -1312,7 +1312,7 @@ Monthly payments are calculated on the Data Highway (for subscription payment pl
 
 Each of the initial 21 Supernodes (SNs) need to top-up MXC to get a sufficient amount in their SN to be able achieve a threshold holding that will allow them to generate a unique NetID (Network ID) that's associated with their SN and will be recorded on-chain.
 
-End Devices that is activated at their "home" Supernode, once activated, will have had a DevAddr stored on the End Device, which contains a NwkAddr (which is derived from the "home" Supernode's unique Network ID). The LPWAN Server (Supernode powered by MXProtocol) will then make one or more POST request from the LPWAN App Server codebase to the Data Highway to store roaming related information about that End Device on the distributed ledger database (under the RoamingBaseProfile class's `devAddr` and `homeNet` properties of the EndDevice class), as shown in the Roaming Class Diagram https://hackmd.io/mISvYh4-RTq3fNxrkThzUg?view#Class-Diagrams. 
+End Devices that is activated at their "home" Supernode, once activated, will have had a DevAddr stored on the End Device, which contains a NwkAddr (which is derived from the "home" Supernode's unique Network ID). The LPWAN Server (Supernode powered by MXProtocol) will then make one or more POST request from the LPWAN App Server codebase to the Data Highway to store roaming related information about that End Device on the distributed ledger database (under the RoamingBaseProfile class's `devAddr` and `homeNet` properties of the EndDevice class), as shown in the [Roaming Class Diagram](#Class-Diagrams). 
 
 End Device owners may subscribed to roaming or pay ad-hoc roaming fees in DHX to gain sufficient balance to roam. This will be recorded under the RoamingBaseProfile class's `expiry` date property of the EndDevice class).
 
@@ -1326,7 +1326,7 @@ End Devices may only be allowed to roam at a "visited" Network Server (or Supern
 
 In the situation where the End Device tries to roam by attempting to join a "visited" Supernode, that "visited" Supernode will check for the DevAddr in the uplinked packets, then make a query from the LPWAN App Server codebase (written in GoLang and powered by MXProtocol) to the Data Highway to lookup whether roaming fees have been paid by that End Device (stored under the RoamingBaseProfile class's `expiry` date property of the EndDevice class), and if so it will return "home" Supernode's IP address (if the Network ID is recognizable), otherwise it will just drop the uplinked packets.
 
-If the End Device owner changed it's roaming configuration (in the UI, see https://hackmd.io/mISvYh4-RTq3fNxrkThzUg?view#Intuitive-UX) but the transaction was still pending, then the Supernode could still find out if that's the case by querying the `pending_extrinsics` of the Data Highway parachain.
+If the End Device owner changed it's roaming configuration (in the UI, see [Intuitive-UX](#Intuitive-UX)) but the transaction was still pending, then the Supernode could still find out if that's the case by querying the `pending_extrinsics` of the Data Highway parachain.
 
 Note that this is separate from staking where a user who is an MXC holder chooses one of the 21 Supernodes and participates in staking by depositing their MXC in it to earn DHX depending on how much data that Supernode processes.
 
