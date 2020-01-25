@@ -1,5 +1,8 @@
-
 # Data Highway's Economic Whitepaper <img src='./images/dh-logo-white.png' width='30px' height='30px' class='dh-logo-readme'>
+
+<div class="background-custom"></div>
+
+<div class="margin-sm"></div>
 
 <span class="language-options" style='font-style: italic;'>Read this in other languages: [English](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.md), [한국어](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.ko.md), [日本語](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.ja.md), [简体中文](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.zh-cn.md), [正體中文](https://raw.githubusercontent.com/DataHighway-com/whitepaper/master/README.zh-tw.md)</span>
 <!-- https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
@@ -14,9 +17,13 @@ To contribute edits to this whitepaper, please submit pull requests to this repo
 
 Refer to steps outlined in [CONTRIBUTING](https://github.com/DataHighway-com/whitepaper/blob/master/CONTRIBUTING.md).
 
+<div class="margin-sm"></div>
+
 ## Questions
 
 If you have any questions, please join the [DataHighway Discord](https://discord.gg/KGTbv9Z) and ask in the #general channel.
+
+<div class="page-break"></div>
 
 # Table of Contents
 
@@ -227,6 +234,8 @@ Note: Generate a new chapter with `openssl rand -hex 3`
 
 Note: Update the TOC by installing [markdown-toc](https://github.com/jonschlinkert/markdown-toc), and then running `cd ./node_modules/markdown-toc/ && node cli.js --bullets "*"  --no-firsth1 ../../README.md` and replacing the current TOC with the output.
 
+<div class="page-break"></div>
+
 ## Introduction
 
 The decentralised Data Highway (DH) economic system for the future of IoT will have a monetary system of the DHX token. 
@@ -264,6 +273,8 @@ Supernodes implement the MXProtocol and provide a user-interface (UI). This UI s
 Other roaming hubs that choose to store their roaming policies and agreements on the Data Highway will be supported in their efforts. Alternatively the MXC Foundation gGmbH will facilitate the bridge between other centralized and decentralized roaming hubs and the Data Highway.
 
 Reference: Page 22 of https://www.mxc.org/hubfs/WP/MXC_technical_whitepaper.pdf
+
+<div class="page-break"></div>
 
 ## Goals
 
@@ -391,6 +402,8 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 * Expose API endpoints, such as to access data from the data market, which may be roaming-specific. Refer to the [API](#Technical-Model).
 
+<div class="page-break"></div>
+
 ## Roadmap
 
 ### January 2020
@@ -424,6 +437,8 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 * References:
   * https://medium.com/polkadot-network/polkadot-parachain-slots-f3f051d41699
+
+<div class="page-break"></div>
 
 ## Economic Configuration
 
@@ -464,6 +479,8 @@ In the calculations the example exchange rate for the DHX/USD pair is 1.0.
 #### Future Changes
 
 The DHX DAO may elect to make a protocol change these economic variables.
+
+<div class="page-break"></div>
 
 ## Token Issuance
 
@@ -616,6 +633,8 @@ Historically, the Bitcoin network adopted the halving strategy as follows:
 
 * All 21 million bitcoins (BTC) will be mined by 2140. But more than 98% will be mined by 2030.
 
+<div class="page-break"></div>
+
 ## Token Acquisition
 
 ![](https://i.imgur.com/ek8nb29.png)
@@ -659,6 +678,8 @@ Other means of acquiring DHX tokens at through participating as follows:
         * Loyal MXC holders that held MXC prior to the launch of the Data Highway may earn a boost of up to 1.2x their DHX staking profits through the MLB. Paid for using DHX DAO Treasury's Unlocked Reserves.
     * Combo Boost
         * Up to 1.2x their DHX staking profits (a proportion of the Token Mining boost) by both staking MXC and either staking DHX or Token Mining at the same time.
+
+<div class="page-break"></div>
 
 ## DAO
 
@@ -720,6 +741,8 @@ The DH's Cash Flow Statement reports for a period of time how changes in the Fin
 Table 6: DH Cash Flow Statement
 
 Reference: https://docs.google.com/spreadsheets/d/1pVp7wXq_CxZEmt-5jHVSd1oO1txPCq_U1_drMIceTiw/edit#gid=0
+
+<div class="page-break"></div>
 
 ## Mining
 
@@ -1275,6 +1298,8 @@ Same as Token Mining
 
 Same as Token Mining
 
+<div class="page-break"></div>
+
 ## Roaming
 
 ### Economics
@@ -1566,6 +1591,8 @@ Source: roaming_class_diagram
 
 Source: roaming_ux
 
+<div class="page-break"></div>
+
 ## Inter-Chain Data Market
 
 ### Data Trading
@@ -1732,9 +1759,13 @@ Example combinations of cloud-based services (or similar equivalent):
 
 * Reference: https://www.loomsystems.com/blog/single-post/2017/06/07/prometheus-vs-grafana-vs-graphite-a-feature-comparison
 
+<div class="page-break"></div>
+
 ## Application Ecosystem
 
 TODO
+
+<div class="page-break"></div>
 
 ## Technical Model
 
@@ -1980,6 +2011,8 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
         * Substrate Light Client UI
             * Reference: https://github.com/paritytech/substrate-light-ui
 
+<div class="page-break"></div>
+
 ## Glossary
 
 ### Mining
@@ -2001,6 +2034,8 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
 * Network Server - It may belong to an NetID, with a channel plan, a FNS URL and SNS URL, and IP address, HTTP auth credentials, JS URLs, JS IP address, JS HTTP auth credentials, and roaming policy
 * Roaming Hub - Star Interconnection where a Roaming Hub is inserted using a Serving Network Server, since configuration and management of Mesh Interconnection (of Network Servers and Join Servers) does not scale
 * SNS - Serving Network Server
+
+<div class="page-break"></div>
 
 ## Abbreviations
 
@@ -2039,6 +2074,8 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
 * TPS - Transactions Per Second
 * VNS - Visted Network Server
 
+<div class="page-break"></div>
+
 ## References
 
 * [1] https://royalsocietypublishing.org/doi/full/10.1098/rsos.180298
@@ -2054,6 +2091,8 @@ In addition to the Substrate Core Runtime Modules, the DH will have the followin
 * [11] https://github.com/paritytech/substrate/issues/1354
 * [12] https://www.investopedia.com/ask/answers/100314/whats-difference-between-monetary-policy-and-fiscal-policy.asp
 * [13] https://chainx.org/chainx_en.pdf
+
+<div class="page-break"></div>
 
 ## Appendices
 
