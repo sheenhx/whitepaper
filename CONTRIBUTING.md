@@ -15,4 +15,4 @@ md-to-pdf ./README.md \
 
 Note: `headerIds` must be `true` otherwise TOC links do not work.
 
-2. Update resources that depend on the latest version (e.g. documentation website, and whitepaper download link in the README file of this repository)
+2. Update resources that depend on the latest version (e.g. website, documentation website, and whitepaper download link in the README file of this repository)
