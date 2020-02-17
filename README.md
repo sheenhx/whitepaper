@@ -306,13 +306,10 @@ MXC has designed a low barrier to entry to allow anyone to participate in the DH
 
 #### Fully Decentralized Roaming Solution
 
-The goal is to create a fully decentralized LPWAN Roaming hub solution that uses the Parachain Operator layer of the MXProtocol Architecture and provides a decentralized LPWAN DNS Service.
+The goal is to create a fully decentralized LPWAN Roaming hub solution that uses the Parachain Operator layer of the MXProtocol Architecture and provides a decentralized LPWAN Roaming Packet Forwarding Service.
 
-![](https://i.imgur.com/7RQpnui.jpg)
 
-Figure: MXProtocol Architecture
-
-Reference: Page 2 of [MXC's Data Economy Whitepaper](https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf)
+Reference implementation using DataHighway: Page 2 of [MXC's Data Economy Whitepaper](https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf)
 
 MXProtocol Architecture is implemented into the LPWAN App Server and LPWAN Server codebases, which are based on ChirpStack's LoRa App Server and LoRa Server respectively. Refer to the summary of [LoRaWAN Technology](#Appendix-2-LoRaWAN-Technology)
 
@@ -334,7 +331,7 @@ Implementations of the LPWAN App Server and LPWAN Server will be updated to be c
 
 #### Automated Billing & Charging
 
-* Financial settlement of exchanged roaming-specific data handled on the Data Highway
+* Financial settlement of exchanged roaming-specific data handled on the DataHighway
 
 #### Competitive (Low-Cost), Fair Access, and Consumer Protection
 
@@ -359,11 +356,11 @@ The LPWAN Supernode Hub has a modern and intuitive interface that allows IoT End
 
 ![](https://i.imgur.com/iNShRuJ.png)
 
-**Figure: Toggle Roaming participation in Gateway User Panel (old UX)**
+**Figure: Toggle Roaming participation in Gateway User Panel (example implementation with DataHighway)**
 
 ![](https://i.imgur.com/ypAnAIy.png)
 
-**Figure: Toggle Roaming participation in End Device User Panel (old UX)**
+**Figure: Toggle Roaming participation in End Device User Panel (example implementation with DataHighway)**
 
 Reference: 
 * https://www.mxc.org/hubfs/downloads/mxc_smb_whitepaper.pdf
@@ -378,7 +375,7 @@ The Data Highway will be a Polkadot parachain that is forecast to support at lea
 
 *"Depending on the block production algorithm and parameters, the transaction throughput of each chain can vary, and thus the overall throughput of the Polkadot network can only be estimated. The first version of Polkadot will allow up to 100 parachains, and assuming each can support at least 10 transactions per second (TPS), a lower bound on throughput would be about 1000 TPS."*
 
-Only a limited amount of End Devices will be roaming initially, but scalability is still important for future proofing. In contrast the Data Highway's Inter-Chain Data Market (separate Whitepaper) will require higher TPS since it includes a DEX.
+Only a limited amount of End Devices will be roaming initially, but scalability is still important for future proofing. In contrast the Data Highway's Inter-Chain Data Market (separate section under thisWhitepaper) will require higher TPS since it includes a DEX.
 
 ![](https://i.imgur.com/Sc5GRdi.png)
 
@@ -387,7 +384,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 ### Security
 
-* Secure mechanism to ensure data stream may be copied and transmitted sequentially from Data Provider (owner of IoT End Device) to Data Buyer (consumer).
+* Secure End2End mechanism to ensure data stream may be copied and transmitted sequentially from Data Provider (owner of IoT End Device) to Data Buyer (consumer).
 
 ### Auditable
 
@@ -400,7 +397,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 ### DEX
 
-* Financial settlement of exchanged data may be handled by MXC.
+* Financial settlement of exchanged data may be handled by Polkadot Substrate for roaming payment.
 
 ### API
 
