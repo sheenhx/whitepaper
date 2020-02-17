@@ -268,13 +268,13 @@ Supernode owners may also choose to restrict access to roaming devices via the L
 
 Data Highway (DH) is an implementation of an open-source and fully decentralised roaming service that allows LPWAN IoT End Devices that have enabled roaming to move out of the network coverage area of their "home" Network Server and into the network coverage area of a "visited" Network Server, where the "visited" Network Server may query the Data Highways distributed ledger (database storage) to retrieve information such as whether the device has enabled roaming, and whether an individual party to party (bilateral) roaming agreement has been established between the Network Operator of the "visited" Network Server and the Network Operator of the "home" Network Server. If the roaming join request is accepted then the packets of data that are uplinked when roaming will be forwarded such that Data Consumers gain continuous access to the data.
 
-The Network Server's are referred to as Supernodes if they have purchased a Network ID and belong to the MXC Network).
+The Network Server's are referred to as MXC Supernodes if they have purchased a Network ID and belong to the MXC Network, further technologies like Sigfox and NB-IoT can also participate through Network ID based roaming.
 
 It will be compatible with the latest [LoRaWAN Backend Interface Specification](https://lora-alliance.org/sites/default/files/2018-04/lorawantm-backend-interfaces-v1.0.pdf). A public API will be exposed that anyone (including but not limited to LoRa Alliance DNS Operators and LoRa Alliance members) may access to allow them to setup and immutably store and retrieve information about roaming network operators (decentralized LPWAN DNS Service), networks (decentralised LPWAN Roaming Service, including purchase price for network ids), users (and their priveleges), organizations, roaming policies (accounting, billing, charging, adjustments), and profiles (routing, service).
 
 Supernodes implement the MXProtocol and provide a user-interface (UI). This UI shall be updated to allow Supernode owners and stakeholders to interact with this API, as shown in these [proposed changes](#Proposed-Roaming-Integration-into-MXProtocol-of-LPWAN-Supernodes).
 
-Other roaming hubs that choose to store their roaming policies and agreements on the Data Highway will be supported in their efforts. Alternatively the MXC Foundation gGmbH will facilitate the bridge between other centralized and decentralized roaming hubs and the Data Highway.
+Other roaming hubs that choose to store their roaming policies and agreements on the Data Highway will be supported in their efforts. Alternatively the MXC Foundation gGmbH, Lora Alliance, Sigfox and 3GPP will facilitate the bridge between other centralized and decentralized roaming hubs and the Data Highway.
 
 Reference: Page 22 of https://www.mxc.org/hubfs/WP/MXC_technical_whitepaper.pdf
 
