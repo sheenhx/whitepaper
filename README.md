@@ -12,7 +12,11 @@
 ## Contributions
 
 To contribute edits to this whitepaper, please submit pull requests to this repository with your changes.
+Go to DataHighway Github to create issues or pull requests.
+[<img src="http://pixelartmaker.com/art/2b2b92fca4e146e.png" width="100">](https://github.com/DataHighway-DHX/whitepaper)
 
+
+![submit](/images/submit-issue.gif)
 ### Releases
 
 Refer to steps outlined in [CONTRIBUTING](https://github.com/DataHighway-com/whitepaper/blob/master/CONTRIBUTING.md).
