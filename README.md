@@ -309,7 +309,7 @@ MXC has designed a low barrier to entry to allow anyone to participate in the DH
 The goal is to create a fully decentralized LPWAN Roaming hub solution that uses the Parachain Operator layer of the MXProtocol Architecture and provides a decentralized LPWAN Roaming Packet Forwarding Service.
 
 
-Reference implementation using DataHighway: Page 2 of [MXC's Data Economy Whitepaper](https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf)
+Reference to the proposed implementation of the DataHighway: Page 2 of [MXC's Data Economy Whitepaper](https://www.mxc.org/hubfs/WP/MXC_data_economy_whitepaper.pdf)
 
 MXProtocol Architecture is implemented into the LPWAN App Server and LPWAN Server codebases, which are based on ChirpStack's LoRa App Server and LoRa Server respectively. Refer to the summary of [LoRaWAN Technology](#Appendix-2-LoRaWAN-Technology)
 
