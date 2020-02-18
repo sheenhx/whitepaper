@@ -397,7 +397,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 ### DEX
 
-* Financial settlement of exchanged data may be handled by Polkadot Substrate for roaming payment.
+* Financial settlement of exchanged data may be handled by the DataHighway for roaming payments.
 
 ### API
 
