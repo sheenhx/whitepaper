@@ -384,7 +384,7 @@ Only a limited amount of End Devices will be roaming initially, but scalability 
 
 ### Security
 
-* Secure End2End mechanism to ensure data stream may be copied and transmitted sequentially from Data Provider (owner of IoT End Device) to Data Buyer (consumer).
+* Secure End2End mechanism to ensure data streams may be copied and transmitted sequentially from Data Providers (owners of IoT End Devices) to Data Buyers (consumers).
 
 ### Auditable
 
