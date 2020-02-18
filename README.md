@@ -489,7 +489,7 @@ The DHX DAO may elect to make a protocol change these economic variables.
 
 The issuance of the DHX token is through either:
 * Block Authoring / Production Rewards - DHX to NPoS Collators for producing a block
-* Unfreezing DAO Treasury Unlocked Reserves - DHX entitlements claimed through DAO approval in a democracy way
+* Unfreezing DAO Treasury Unlocked Reserves - DHX entitlements claimed through DAO approval in a democratic way
 * Decentralised/Centralized Exchange - DHX exchanged for other assets
 
 #### Block Authoring / Production Rewards
