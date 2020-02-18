@@ -258,7 +258,7 @@ A category of devices that run on low bandwidths (less than 125kHz, 200bps) with
 
 #### Roaming
 
-Devices (LPWAN IoT End Devices) are owned by Data Providers and registered at a "home" Network Server (or Supernode that has purchased specific Network ID) that belongs to a specific Network Operator (such as the MXC Network).
+Devices (LPWAN IoT End Devices) are owned by Data Providers and registered at a "home" Network Server (or Supernode that has purchased a specific Network ID) that belongs to a specific Network Operator (such as the MXC Network).
 
 Data Consumers may request to be granted access to receive packets of data that have been uplinked from a device, which may require purchasing ad-hoc access or a subscription from the Data Highway's Inter-Chain Data Market (see separate "Inter-Chain Data Market" Whitepaper).
 
