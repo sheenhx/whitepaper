@@ -375,7 +375,7 @@ The Data Highway will be a Polkadot parachain that is forecast to support at lea
 
 *"Depending on the block production algorithm and parameters, the transaction throughput of each chain can vary, and thus the overall throughput of the Polkadot network can only be estimated. The first version of Polkadot will allow up to 100 parachains, and assuming each can support at least 10 transactions per second (TPS), a lower bound on throughput would be about 1000 TPS."*
 
-Only a limited amount of End Devices will be roaming initially, but scalability is still important for future proofing. In contrast the Data Highway's Inter-Chain Data Market (separate section under thisWhitepaper) will require higher TPS since it includes a DEX.
+Only a limited amount of End Devices will be roaming initially, but scalability is still important for future proofing. In contrast the Data Highway's Inter-Chain Data Market (separate section under this Whitepaper) will require a higher TPS since it includes a DEX.
 
 ![](https://i.imgur.com/Sc5GRdi.png)
 
