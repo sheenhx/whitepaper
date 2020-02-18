@@ -254,7 +254,7 @@ The Data Highway's (DHX) Inter-Chain Data Market allows participants to become d
 
 #### LPWAN
 
-A caterory of devices that runs on low bandwidth (less than 125kHz, 200bps), and consumes low power (less than 2W when transmitting). Typicall technologys involves LoraWAN, Sigfox, Weightless, NB-IoT.
+A category of devices that run on low bandwidths (less than 125kHz, 200bps) with low power consumption (less than 2W when transmitting). Typically the technologies involved include LoRaWAN, Sigfox, Weightless, NB-IoT.
 
 #### Roaming
 
