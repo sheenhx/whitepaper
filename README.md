@@ -256,9 +256,13 @@ It will allow users to be rewarded in return for participation.
 
 The Data Highway's (DHX) Inter-Chain Data Market allows participants to become data providers and to share IoT data from their devices to application developers in exchange for DHX tokens.
 
+#### LPWAN
+
+A category of devices that run on low bandwidths (less than 125kHz, 200bps) with low power consumption (less than 2W when transmitting). Typically the technologies involved include LoRaWAN, Sigfox, Weightless, NB-IoT.
+
 #### Roaming
 
-Devices (LoRaWAN IoT End Devices) are owned by Data Providers and registered at a "home" Network Server (or Supernode that has purchased specific Network ID) that belongs to a specific Network Operator (such as the MXC Network).
+Devices (LPWAN IoT End Devices) are owned by Data Providers and registered at a "home" Network Server (or Supernode that has purchased a specific Network ID) that belongs to a specific Network Operator (such as the MXC Network).
 
 Data Consumers may request to be granted access to receive packets of data that have been uplinked from a device, which may require purchasing ad-hoc access or a subscription from the Data Highway's Inter-Chain Data Market (see separate "Inter-Chain Data Market" Whitepaper).
 
@@ -266,7 +270,7 @@ Device owners may enable or disable roaming and associated payments via the LPWA
 
 Supernode owners may also choose to restrict access to roaming devices via the LPWAN Supernode Portal.
 
-Data Highway (DH) is an implementation of an open-source and fully decentralised roaming service that allows LoRaWAN IoT End Devices that have enabled roaming to move out of the network coverage area of their "home" Network Server and into the network coverage area of a "visited" Network Server, where the "visited" Network Server may query the Data Highways distributed ledger (database storage) to retrieve information such as whether the device has enabled roaming, and whether an individual party to party (bilateral) roaming agreement has been established between the Network Operator of the "visited" Network Server and the Network Operator of the "home" Network Server. If the roaming join request is accepted then the packets of data that are uplinked when roaming will be forwarded such that Data Consumers gain continuous access to the data.
+Data Highway (DH) is an implementation of an open-source and fully decentralised roaming service that allows LPWAN IoT End Devices that have enabled roaming to move out of the network coverage area of their "home" Network Server and into the network coverage area of a "visited" Network Server, where the "visited" Network Server may query the Data Highways distributed ledger (database storage) to retrieve information such as whether the device has enabled roaming, and whether an individual party to party (bilateral) roaming agreement has been established between the Network Operator of the "visited" Network Server and the Network Operator of the "home" Network Server. If the roaming join request is accepted then the packets of data that are uplinked when roaming will be forwarded such that Data Consumers gain continuous access to the data.
 
 The Network Server's are referred to as Supernodes if they have purchased a Network ID and belong to the MXC Network).
 
